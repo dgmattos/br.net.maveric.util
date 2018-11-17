@@ -9,11 +9,12 @@ namespace br.net.maveric.util.Security
 {
     public static class Password
     {
-        private static string salt = "265436517410FQi(1Xq_FPxx)Odq7bsiOF5RaD5HRvndn(o{D[xFUaKs2TxGM8art?o0B4AJJn(V_vWyv5@SKGM?50)S@{N{xB+}L?)bLl55gQ@ZPMW5m}aZlYPjiRdQu}owOV(xib_[wXQ90UUaM2lH(3h2gj7S)QsbquJ06551700810";
+        //TODO - Alterar o valor da propriedado salt com uma strig alfa numéria de até 128 caracteres
+        private static string salt = "_ADD_SALT_STRING_HERE_";
 
         public static string GeneratePassword(int length) //length of salt    
         {
-            const string allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789";
+            const string allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789()_@.,#";
             try
             {
 
