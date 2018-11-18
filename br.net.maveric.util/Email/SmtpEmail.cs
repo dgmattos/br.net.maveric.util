@@ -79,6 +79,19 @@ namespace br.net.maveric.util.Email
             this.SMTPConnection();
         }
 
+        public SmtpEmail(string Host, string email, string senha, int? port, bool? EnableSsl)
+        {
+
+            this.Credentials = new System.Net.NetworkCredential(email, senha);
+            this.e_mail_from = email;
+            this.Port = (port == null) ? 587 : port.Value;
+            this.EnableSsl = (EnableSsl == null) ? false : EnableSsl.Value;
+            this.UseDefaultCredentials = UseDefaultCredentials;
+            this.Host = Host;
+            this.email = email;
+            this.SMTPConnection();
+        }
+
 
         private void SMTPConnection()
         {
